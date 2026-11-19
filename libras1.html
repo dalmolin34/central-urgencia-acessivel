@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f7f9fc">
+	<meta name="description" content="Acesse rapidamente os telefones de emergência e compartilhe sua localização.">
+	<title>central — Ajuda de emergência</title>
+	<style>
+		:root{color-scheme:light;--ink:#17243a;--muted:#316cca;--line:#e5eaf1;--paper:#fff;--bg:#f5f7fb;--red:#df3345;--blue:#2863d7;--green:#12835c;--shadow:0 14px 40px rgba(29,47,77,.08)}
+		*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}button{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+		header{height:76px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:21px;font-weight:800;letter-spacing:-.7px}.brand-mark{width:37px;height:37px;border-radius:12px;background:var(--red);display:grid;place-items:center;color:white;font-size:23px;line-height:1}.nav-note{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px}.pulse{width:8px;height:8px;border-radius:50%;background:#30a675;box-shadow:0 0 0 4px #e3f5ed}
+		main{padding:45px 0 42px}.hero{max-width:none;margin:0 auto 26px;padding:30px 34px;text-align:left;border-radius:20px;background:linear-gradient(115deg,#17243a,#243a5c);color:#fff;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:190px;height:190px;right:7%;top:-105px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 25px rgba(255,255,255,.035),0 0 0 50px rgba(255,255,255,.025)}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.12);color:#ffd9dd;font-size:12px;font-weight:750;letter-spacing:.06em;text-transform:uppercase}.hero h1{font-size:clamp(34px,6vw,48px);line-height:1.06;letter-spacing:-1.8px;margin:15px 0 10px}.hero p{max-width:650px;margin:0;color:#d5deeb;font-size:16px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{display:flex;flex-direction:column;min-height:230px;padding:22px;background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 16px rgba(29,47,77,.035);transition:transform .18s,box-shadow .18s}.service:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.service-top{display:flex;justify-content:space-between;align-items:flex-start}.icon{width:48px;height:48px;border-radius:14px;background:#fff0f1;display:grid;place-items:center;font-size:25px}.badge{font-size:11px;font-weight:700;color:#707b8c;background:#f1f3f7;padding:5px 8px;border-radius:99px}.service h2{font-size:19px;margin:17px 0 3px;letter-spacing:-.3px}.service p{margin:0;color:var(--muted);font-size:14px}.service-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:20px}.number{font-size:22px;font-weight:800;letter-spacing:-.6px}.call{border:0;border-radius:10px;background:var(--red);color:white;text-decoration:none;font-size:14px;font-weight:750;padding:11px 16px;white-space:nowrap;cursor:pointer}.call:hover{background:#c32639}.service.blue .icon{background:#edf3ff}.service.blue .call{background:var(--blue)}.service.green .icon{background:#e9f7f1}.service.green .call{background:var(--green)}.service.orange .icon{background:#fff4e7}.service.orange .call{background:#c86b12}.service.purple .icon{background:#f3efff}.service.purple .call{background:#6d4bcc}.service.gray .icon{background:#edf1f5}.service.gray .call{background:#44546a}
+		.libras{margin-top:24px;padding:20px 22px;border:1px solid #d9e9e2;border-radius:16px;background:#eff8f4;display:flex;gap:14px;align-items:flex-start}.libras-icon{font-size:24px}.libras h2{font-size:16px;margin:0 0 4px}.libras p{font-size:13px;color:var(--muted);margin:0}
+		.account{margin:24px 0;padding:22px;border:1px solid var(--line);border-radius:16px;background:#fff}.account h2{font-size:18px;margin:0 0 6px}.account>p{color:var(--muted);font-size:13px;margin:0 0 14px}.account-forms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.account-form{display:grid;gap:9px;padding:16px;border:1px solid var(--line);border-radius:12px}.account-form h3{font-size:15px;margin:0}.account-form label{font-size:13px;font-weight:650}.account-form input{width:100%;padding:10px;border:1px solid #cbd4e1;border-radius:8px;font:inherit}.account-form button,.account-logout{padding:10px 14px;border:0;border-radius:9px;background:var(--blue);color:#fff;font:inherit;font-weight:700;cursor:pointer}.account-status{min-height:20px;margin:12px 0 0!important}.account-session{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px;background:#eff8f4;border-radius:10px}.account-session p{margin:0;font-size:14px}.account-profile{display:grid;gap:3px}.account-profile p{font-size:13px;color:var(--muted)}.account-profile strong{color:var(--ink)}.account-session[hidden],.account-forms[hidden]{display:none}.account-logout{background:#44546a}
+		#app-content[hidden]{display:none}
+		.video-call{margin-top:14px;padding:20px 22px;border:1px solid #dce5f2;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:space-between;gap:16px}.video-call h2{font-size:16px;margin:0 0 4px}.video-call p{font-size:13px;color:var(--muted);margin:0}.video-call-action{display:inline-block;padding:10px 14px;border-radius:9px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;white-space:nowrap}.video-call-action:hover{background:#1d4fae}
+		.location{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:24px;padding:20px 22px;border:1px solid #dce5f2;border-radius:16px;background:#edf4ff}.location-info{display:flex;align-items:center;gap:14px}.pin{width:43px;height:43px;border-radius:13px;background:white;display:grid;place-items:center;font-size:22px}.location h2{font-size:16px;margin:0 0 2px}.location p{font-size:13px;color:var(--muted);margin:0}.location-action{padding:10px 14px;border:1px solid #c8d8f4;background:white;color:#2057bc;border-radius:9px;font-weight:700;cursor:pointer;white-space:nowrap}.location-action:hover{background:#f8faff}.notice{margin:20px auto 0;max-width:800px;color:var(--muted);font-size:12px;text-align:center}.notice strong{color:#4c596c}.help{margin-top:30px;padding:23px 25px;border-radius:16px;background:#fff;border:1px solid var(--line);display:flex;gap:16px;align-items:flex-start}.help-icon{font-size:22px}.help h2{font-size:15px;margin:0 0 5px}.help p{margin:0;color:var(--muted);font-size:13px}.help a{font-weight:700;color:#bf2939}footer{padding:20px 0 32px;border-top:1px solid var(--line);color:#8590a0;font-size:12px;text-align:center}
+		#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#17243a;color:white;padding:11px 16px;border-radius:10px;font-size:14px;box-shadow:var(--shadow);transition:.2s;max-width:calc(100% - 32px);z-index:5}#toast.show{opacity:1;transform:translate(-50%,0)}
+		@media(max-width:760px){main{padding-top:38px}.services{grid-template-columns:repeat(2,1fr)}.service{min-height:220px}.hero p{font-size:15px}}
+		@media(max-width:520px){.wrap{width:min(100% - 28px,440px)}header{height:65px}.nav-note{font-size:11px}.hero{padding:24px 20px}.hero h1{font-size:36px;letter-spacing:-1.5px}.hero p{font-size:14px}.services{grid-template-columns:1fr;gap:12px}.service{min-height:0;padding:18px}.service-bottom{padding-top:14px}.location{align-items:flex-start;flex-direction:column}.location-action{width:100%}.video-call{align-items:flex-start;flex-direction:column}.video-call-action{width:100%;text-align:center}.help{padding:18px}}
+		@media(max-width:600px){.account-forms{grid-template-columns:1fr}.account-session{align-items:flex-start;flex-direction:column}.account-logout{width:100%}}
+		@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="wrap nav">
+			<a class="brand" href="#inicio" aria-label="Pronto, início"><span class="brand-mark" aria-hidden="true">＋</span>Central<span style="color:var(--red)">.</span></a>
+			<div class="nav-note"><span class="pulse" aria-hidden="true"></span> Central de urgência · Brasil</div>
+		</div>
+	</header>
+	<main class="wrap" id="inicio">
+		<section class="hero" aria-labelledby="titulo">
+			<span class="eyebrow"><span aria-hidden="true">●</span> Central de atendimento · 24 horas</span>
+			<h1>Central de urgência</h1>
+			<p>Selecione o serviço adequado e ligue diretamente. Informe sua localização e descreva a situação com clareza para agilizar o atendimento.</p>
+		</section>
+		<section class="account" aria-labelledby="account-title">
+			<h2 id="account-title">Cadastro de usuários</h2>
+			<p>Cadastre-se com nome completo e senha ou entre em uma conta existente.</p>
+			<div class="account-session" id="account-session" hidden><div class="account-profile" aria-live="polite"><p id="account-welcome"></p><p><strong>Celular:</strong> <span id="profile-whatsapp"></span></p><p><strong>E-mail:</strong> <span id="profile-email"></span></p></div><button class="account-logout" id="account-logout" type="button">Sair</button></div>
+			<div class="account-forms" id="account-forms">
+				<form class="account-form" id="register-form"><h3>Criar conta</h3><label for="register-name">Nome completo</label><input id="register-name" name="name" autocomplete="name" required minlength="3" maxlength="100"><label for="register-whatsapp">Celular com WhatsApp</label><input id="register-whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="(11) 91234-5678" required><label for="register-email">E-mail</label><input id="register-email" name="email" type="email" autocomplete="email" required maxlength="254"><label for="register-password">Senha (mínimo de 8 caracteres)</label><input id="register-password" name="password" type="password" autocomplete="new-password" required minlength="8"><button type="submit">Cadastrar</button></form>
+				<form class="account-form" id="login-form"><h3>Entrar</h3><label for="login-name">Nome completo</label><input id="login-name" name="name" autocomplete="username" required><label for="login-password">Senha</label><input id="login-password" name="password" type="password" autocomplete="current-password" required><button type="submit">Entrar</button></form>
+			</div>
+			<p class="account-status" id="account-status" role="status" aria-live="polite"></p>
+			<p>Este cadastro é armazenado apenas neste navegador e não oferece controle de acesso seguro entre dispositivos. Para autenticação real e administração de usuários, conecte o site a um servidor com banco de dados e autenticação segura. Chamadas de emergência não exigem login.</p>
+		</section>
+
+		<div id="app-content" hidden>
+		<section class="services" aria-label="Serviços de emergência">
+			<article class="service">
+				<div class="service-top"><span class="icon" aria-hidden="true">🚑</span><span class="badge">Emergência médica</span></div>
+				<h2>SAMU</h2><p>Atendimento médico de urgência e emergência.</p>
+				<div class="service-bottom"><span class="number">192</span><a class="call" href="tel:192" aria-label="Ligar para o SAMU no 192">Ligar agora&nbsp; ↗</a></div>
+			</article>
+			<article class="service">
+				<div class="service-top"><span class="icon" aria-hidden="true">🚓</span><span class="badge">Segurança pública</span></div>
+				<h2>Polícia Militar</h2><p>Emergências policiais e situações de risco imediato.</p>
+				<div class="service-bottom"><span class="number">190</span><a class="call" href="tel:190" aria-label="Ligar para a Polícia Militar no 190">Ligar agora&nbsp; ↗</a></div>
+			</article>
+			<article class="service">
+				<div class="service-top"><span class="icon" aria-hidden="true">🚒</span><span class="badge">Incêndio e resgate</span></div>
+				<h2>Bombeiros</h2><p>Incêndios, salvamentos e acidentes com vítimas.</p>
+				<div class="service-bottom"><span class="number">193</span><a class="call" href="tel:193" aria-label="Ligar para os Bombeiros no 193">Ligar agora&nbsp; ↗</a></div>
+			</article>
+			<article class="service blue">
+				<div class="service-top"><span class="icon" aria-hidden="true">🛣️</span><span class="badge">Rodovias federais</span></div>
+				<h2>Polícia Rodoviária Federal</h2><p>Emergências e ocorrências em rodovias federais.</p>
+				<div class="service-bottom"><span class="number">191</span><a class="call" href="tel:191" aria-label="Ligar para a Polícia Rodoviária Federal no 191">Ligar agora&nbsp; ↗</a></div>
+			</article>
+			<article class="service green">
+				<div class="service-top"><span class="icon" aria-hidden="true">🌧️</span><span class="badge">Proteção e prevenção</span></div>
+				<h2>Defesa Civil</h2><p>Desastres, alagamentos, deslizamentos e riscos.</p>
+				<div class="service-bottom"><span class="number">199</span><a class="call" href="tel:199" aria-label="Ligar para a Defesa Civil no 199">Ligar agora&nbsp; ↗</a></div>
+			</article>
+			<article class="service orange">
+				<div class="service-top"><span class="icon" aria-hidden="true">📞</span><span class="badge">Apoio e orientação</span></div>
+				<h2>Central de Atendimento à Mulher</h2><p>Orientação e acolhimento para mulheres.</p>
+				<div class="service-bottom"><span class="number">180</span><a class="call" href="tel:180" aria-label="Ligar para a Central de Atendimento à Mulher no 180">Ligar agora&nbsp; ↗</a></div>
+			</article>
+		</section>
+
+		<section class="location" aria-label="Compartilhar localização">
+			<div class="location-info"><span class="pin" aria-hidden="true">📍</span><div><h2>Compartilhe sua localização</h2><p id="location-status" aria-live="polite">Ajude a equipe de emergência a encontrar você mais rápido.</p></div></div>
+			<button class="location-action" id="location-button" type="button">Obter minha localização</button>
+		</section>
+		<section class="libras" aria-labelledby="libras-title">
+			<span class="libras-icon" aria-hidden="true">🤟</span>
+			<div><h2 id="libras-title">Acesse ibilidade em Libras</h2><p>Use o botão do VLibras na tela para traduzir o conteúdo deste site em Língua Brasileira de Sinais. É um tradutor virtual: não substitui um intérprete humano e não interpreta chamadas telefônicas.</p></div>
+		</section>
+		<section class="video-call" aria-labelledby="video-call-title">
+			<div><h2 id="video-call-title">Precisa conversar em Libras por vídeo?</h2><p>Inicie uma reunião no Google Meet e compartilhe o convite com a pessoa surda ou com um intérprete. Peça que a pessoa informe o próprio nome ao entrar para que o administrador possa identificá-la. O Meet mostra quem está na reunião, mas este botão não recebe chamadas nem envia notificações; isso exige uma integração de chamadas com um servidor. Esta opção não conecta diretamente aos serviços de emergência.</p></div>
+			<a class="video-call-action" href="https://meet.google.com/new" target="_blank" rel="noopener noreferrer">Iniciar videochamada ↗</a>
+		</section>
+
+		<aside class="help"><span class="help-icon" aria-hidden="true">ℹ️</span><div><h2>Em caso de emergência</h2><p>As ligações são gratuitas. Este site não envia equipes de socorro: ao tocar em “Ligar agora”, seu aparelho iniciará uma chamada para o número escolhido. Para apoio emocional, ligue para o <a href="tel:188">CVV — 188</a>.</p></div></aside>
+		<p class="notice"><strong>Use os serviços com responsabilidade.</strong> Trotes podem atrasar o atendimento de quem realmente precisa.</p>
+		</div>
+	</main>
+	<footer><div class="wrap">Pronto — Acesso rápido a serviços de emergência no Brasil.</div></footer>
+	<div id="toast" role="status" aria-live="polite"></div>
+	<div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+	<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+	<script>
+		const accountStatus=document.getElementById('account-status');
+		const accountForms=document.getElementById('account-forms');
+		const accountSession=document.getElementById('account-session');
+		const appContent=document.getElementById('app-content');
+		const accountKey='centralEmergencyUsers';
+		function getUsers(){try{return JSON.parse(localStorage.getItem(accountKey)||'[]')}catch{return []}}
+		function base64(bytes){return btoa(String.fromCharCode(...new Uint8Array(bytes)))}
+		async function hashPassword(password,salt){const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt,iterations:150000,hash:'SHA-256'},key,256);return base64(bits)}
+		function signedIn(name){accountForms.hidden=true;accountSession.hidden=false;appContent.hidden=false;document.getElementById('account-welcome').textContent=`Perfil: ${name}`;const user=getUsers().find(item=>item.name.toLocaleLowerCase('pt-BR')===name.toLocaleLowerCase('pt-BR'));document.getElementById('profile-whatsapp').textContent=user?.whatsapp||'Não informado';document.getElementById('profile-email').textContent=user?.email||'Não informado';accountStatus.textContent=''}
+		try{const name=sessionStorage.getItem('centralEmergencyUser');if(name)signedIn(name)}catch{}
+		document.getElementById('register-form').addEventListener('submit',async event=>{event.preventDefault();const form=event.currentTarget;const name=form.elements.name.value.trim();const whatsapp=form.elements.whatsapp.value.trim();const email=form.elements.email.value.trim();const password=form.elements.password.value;if(!crypto.subtle){accountStatus.textContent='Cadastro indisponível. Acesse o site por uma conexão segura (HTTPS).';return}try{const users=getUsers();if(users.some(user=>user.name.toLocaleLowerCase('pt-BR')===name.toLocaleLowerCase('pt-BR'))){accountStatus.textContent='Já existe uma conta com esse nome.';return}const salt=crypto.getRandomValues(new Uint8Array(16));users.push({name,whatsapp,email,salt:base64(salt),hash:await hashPassword(password,salt)});localStorage.setItem(accountKey,JSON.stringify(users));sessionStorage.setItem('centralEmergencyUser',name);form.reset();signedIn(name)}catch{accountStatus.textContent='Não foi possível salvar o cadastro neste navegador.'}});
+		document.getElementById('login-form').addEventListener('submit',async event=>{event.preventDefault();const form=event.currentTarget;const name=form.elements.name.value.trim();const password=form.elements.password.value;if(!crypto.subtle){accountStatus.textContent='Acesso indisponível. Acesse o site por uma conexão segura (HTTPS).';return}try{const user=getUsers().find(item=>item.name.toLocaleLowerCase('pt-BR')===name.toLocaleLowerCase('pt-BR'));if(!user||await hashPassword(password,Uint8Array.from(atob(user.salt),char=>char.charCodeAt(0)))!==user.hash){accountStatus.textContent='Nome ou senha incorretos.';return}sessionStorage.setItem('centralEmergencyUser',user.name);form.reset();signedIn(user.name)}catch{accountStatus.textContent='Não foi possível validar a conta neste navegador.'}});
+		document.getElementById('account-logout').addEventListener('click',()=>{try{sessionStorage.removeItem('centralEmergencyUser')}catch{}accountSession.hidden=true;accountForms.hidden=false;appContent.hidden=true;accountStatus.textContent='Você saiu da sua conta.'});
+	</script>
+	<script>
+		const button=document.getElementById('location-button');
+		const status=document.getElementById('location-status');
+		const toast=document.getElementById('toast');
+		let toastTimer;
+		function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),3500)}
+		button.addEventListener('click',()=>{
+			if(!navigator.geolocation){status.textContent='Seu navegador não oferece acesso à localização.';showToast('Não foi possível acessar a localização neste navegador.');return}
+			button.disabled=true;button.textContent='Obtendo localização…';status.textContent='Aguardando permissão para acessar sua localização.';
+			navigator.geolocation.getCurrentPosition(async position=>{
+				const {latitude,longitude}=position.coords;
+				const link=`https://maps.google.com/?q=${latitude},${longitude}`;
+				try{await navigator.clipboard.writeText(link);status.textContent=`Localização copiada: ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;showToast('Link da localização copiado. Você pode enviá-lo à equipe de socorro.');}
+				catch{status.textContent=`Sua localização: ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;window.open(link,'_blank','noopener');showToast('Mapa aberto em uma nova aba.');}
+				button.disabled=false;button.textContent='Obter novamente';
+			},error=>{
+				const messages={1:'Permita o acesso à localização nas configurações do navegador.',2:'Não foi possível determinar sua localização. Tente novamente.',3:'A solicitação demorou demais. Tente novamente.'};
+				status.textContent=messages[error.code]||'Não foi possível obter sua localização.';showToast(status.textContent);button.disabled=false;button.textContent='Tentar novamente';
+			},{enableHighAccuracy:true,timeout:12000,maximumAge:0});
+		});
+	</script>
+</body>
+</html>
+
